@@ -1,0 +1,302 @@
+/* ESTO AFECTA A TODA LA PAGINA */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la fuente */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    background-color: #f4f4f4; /* Establece el color de fondo */
+}
+
+p {
+    line-height: 1.6; /* Define la altura de la linea */
+    color: #666; /* Establece el color del texto */
+    margin-top: 10px; /* Añade un margen superior */
+}
+
+.logo {
+    text-align: center; /* Centra el logotipo */
+}
+
+header {
+    background-color: #fff; /* Establece el color de fondo */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Añade una sombra */
+    padding: 10px 20px; /* Añade relleno */
+    width: 100%; /* Establece la anchura completa */
+    top: 0; /* Fija la posicion en la parte superior */
+    z-index: 1000; /* Asegura que el encabezado este por encima de otros elementos */
+}
+
+.menu-item {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+    margin-right: 5px; /* Añade espacio a la derecha de cada elemento */
+    padding: 10px 15px; /* Añade relleno para hacer el area clickeable más grande */
+}
+
+.desplegable-contenido {
+    display: none; /* Oculta el contenido por defecto */
+    position: absolute; /* Posiciona el contenido de forma absoluta */
+    background-color: #f9f9f9; /* Establece el color de fondo */
+    min-width: 160px; /* Establece el ancho minimo */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Añade una sombra */
+    z-index: 1; /* Asegura que este por encima de otros elementos */
+}
+
+.desplegable:hover .desplegable-contenido {
+    display: block; /* Muestra el contenido al pasar el raton */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los estilos de lista por defecto */
+    padding: 0; /* Elimina el relleno */
+    margin: 0; /* Elimina el margen */
+    text-align: center; /* Centra el texto */
+}
+
+nav ul li {
+    display: inline-block; /* Muestra los elementos de la lista en linea */
+    position: relative; /* Establece la posicion relativa */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina la decoración del texto */
+    color: #333; /* Establece el color del texto */
+    padding: 10px 15px; /* Añade relleno */
+    display: block; /* Muestra el enlace como un bloque */
+}
+
+nav .desplegable-contenido {
+    display: none; /* Oculta el contenido por defecto */
+    position: absolute; /* Posiciona el contenido de forma absoluta */
+    background-color: #fff; /* Establece el color de fondo */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25); /* Añade una sombra */
+    min-width: 160px; /* Establece el ancho minimo */
+    z-index: 1001; /* Asegura que este por encima de otros elementos */
+    transition: background-color 0.3s; /* Añade una transicion para el color de fondo */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #c76af9; /* Cambia el color del texto al pasar el raton o al enfocar */
+}
+
+nav .desplegable-contenido li {
+    display: block; /* Muestra los elementos como bloques */
+}
+
+nav .desplegable-contenido li a {
+    padding: 12px 16px; /* Añade relleno */
+    color: #333; /* Establece el color del texto */
+    text-decoration: none; /* Elimina la decoración del texto */
+    display: block; /* Muestra el enlace como un bloque */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+nav .desplegable-contenido li a:hover {
+    background-color: #f1f1f1; /* Cambia el color de fondo al pasar el raton */
+}
+
+nav ul li:hover .desplegable-contenido {
+    display: block; /* Muestra el contenido desplegable al pasar el raton */
+}
+main {
+    margin-top: 45px; /* Añade un margen superior */
+    padding: 20px; /* Añade relleno */
+}
+
+/* SOLO AFECTA A LA PARTE DE EL MUSEO */
+.slides {
+    display: flex; /* Utiliza un contenedor flexible */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    width: 100%; /* Establece el ancho completo */
+    height: auto; /* Establece la altura automatica */
+    position: relative; /* Establece la posicion relativa */
+}
+
+.slide {
+    min-width: 100%; /* Garantiza que cada diapositiva tiene el ancho completo */
+    transition: transform 1s ease-in-out; /* Suaviza la transicion */
+    position: relative; /* Establece la posición relativa */
+    display: flex; /* Utiliza un contenedor flexible */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    justify-content: center; /* Justifica los elementos horizontalmente en el centro */
+}
+
+.slide img {
+    max-width: 55%; /* Establece el ancho maximo de las imagenes */
+    height: auto; /* Establece la altura automatica */
+    display: block; /* Muestra las imagenes como bloques */
+}
+
+/* Selecciona y estiliza todos los slides excepto el primero */
+.slides .slide:not(:first-child) {
+    display: none; /* Oculta todos los slides excepto el primero */
+}
+
+h2 {
+    text-align: center; /* Centra los encabezados h2 */
+}
+
+.inicio {
+    background-position: center; /* Centra la posicion de fondo */
+    height: 250px; /* Establece la altura */
+    display: flex; /* Utiliza un contenedor flexible */
+    justify-content: center; /* Justifica el contenido horizontalmente en el centro */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    color: #fff; /* Establece el color del texto */
+    text-shadow: 2px 2px 4px #000; /* Añade una sombra al texto */
+}
+
+#nosotros {
+    text-align: center; /* Centra el texto */
+}
+
+.inicio h1 {
+    font-size: 3em; /* Establece el tamaño de fuente */
+}
+
+.contenido {
+    padding: 20px; /* Añade relleno */
+}
+
+.artistasseccion {
+    margin-bottom: 40px; /* Añade un margen inferior */
+    text-align: center; /* Centra el texto */
+}
+
+.artistasseccion img {
+    max-width: 40%; /* Establece el ancho maximo de las imagenes */
+    height: auto; /* Establece la altura automatica */
+}
+
+.artistasseccion h2 {
+    margin-top: 0; /* Elimina el margen superior */
+}
+
+#artistas {
+    line-height: 3; /* Establece la altura de la linea */
+    color: #666; /* Establece el color del texto */
+    margin-top: 3px; /* Añade un margen superior */
+    text-align: center; /* Centra el texto */
+    font-size: large; /* Establece el tamaño de fuente */
+}
+
+footer {
+    text-align: center; /* Centra el texto */
+    padding: 20px 0; /* Añade relleno superior e inferior */
+    background-color: #fff; /* Establece el color de fondo */
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Añade una sombra */
+    margin-top: 20px; /* Añade un margen superior */
+}
+
+#contacto {
+    text-align: center; /* Centra el texto */
+}
+
+/* ICONOS */
+ul {
+    list-style: none; /* Elimina los estilos de lista por defecto */
+}
+
+.example-2 {
+    display: flex; /* Utiliza un contenedor flexible */
+    justify-content: center; /* Justifica el contenido horizontalmente en el centro */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+.example-2 .icon-content {
+    margin: 0 10px; /* Añade margenes laterales */
+    position: relative; /* Establece la posición relativa */
+}
+
+.example-2 .icon-content .tooltip {
+    position: absolute; /* Posiciona el tooltip de forma absoluta */
+    top: -30px; /* Posiciona el tooltip encima del icono */
+    left: 50%; /* Centra el tooltip horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posicion horizontal */
+    color: #fff; /* Establece el color del texto */
+    padding: 6px 10px; /* Añade relleno */
+    border-radius: 5px; /* Redondea las esquinas */
+    opacity: 0; /* Oculta el tooltip por defecto */
+    visibility: hidden; /* Oculta el tooltip por defecto */
+    font-size: 14px; /* Establece el tamaño de fuente */
+    transition: all 0.3s ease; /* Añade una transicion */
+}
+
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1; /* Muestra el tooltip */
+    visibility: visible; /* Muestra el tooltip */
+    top: -50px; /* Ajusta la posición vertical */
+}
+
+.example-2 .icon-content a {
+    position: relative; /* Establece la posición relativa */
+    overflow: hidden; /* Oculta el contenido desbordante */
+    display: flex; /* Utiliza un contenedor flexible */
+    justify-content: center; /* Justifica el contenido horizontalmente en el centro */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    width: 50px; /* Establece el ancho */
+    height: 50px; /* Establece la altura */
+    border-radius: 50%; /* Redondea las esquinas */
+    color: #4d4d4d; /* Establece el color del texto */
+    background-color: #fff; /* Establece el color de fondo */
+    transition: all 0.3s ease-in-out; /* Añade una transicion */
+}
+
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%); /* Añade una sombra al pasar el raton */
+}
+
+.example-2 .icon-content a svg {
+    position: relative; /* Establece la posicion relativa */
+    z-index: 1; /* Asegura que el SVG este por encima de otros elementos */
+    width: 30px; /* Establece el ancho */
+    height: 30px; /* Establece la altura */
+}
+
+.example-2 .icon-content a:hover {
+    color: white; /* Cambia el color del texto al pasar el raton */
+}
+
+.example-2 .icon-content a .filled {
+    position: absolute; /* Posiciona el relleno de forma absoluta */
+    top: auto; /* Establece la posicion superior automaticamente */
+    bottom: 0; /* Posiciona el relleno en la parte inferior */
+    left: 0; /* Posiciona el relleno en el lado izquierdo */
+    width: 100%; /* Establece el ancho completo */
+    height: 0; /* Oculta el relleno por defecto */
+    background-color: #000; /* Establece el color de fondo del relleno */
+    transition: all 0.3s ease-in-out; /* Añade una transicion */
+}
+
+.example-2 .icon-content a:hover .filled {
+    height: 100%; /* Muestra el relleno al pasar el raton */
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3; /* Establece el color de fondo para LinkedIn */
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a; /* Establece el color de fondo para GitHub */
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
+    ); /* Establece el gradiente de color para Instagram */
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000; /* Establece el color de fondo para YouTube */
+}
+

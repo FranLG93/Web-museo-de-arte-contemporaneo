@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo de Arte Contemporáneo</title>
+    <link rel="stylesheet" href="visitanos.css">
+    <link rel="icon" type="image/png" href="img/QRlogo.png">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+        <img  src="img/QRlogo.png" height="180px" width="180px">
+        <div>
+            <nav>
+                <ul>
+                    <li class="desplegable">
+                        <a href="museo.html">El Museo</a>
+                        <ul class="desplegable-contenido">
+                            <li><a href="historia.html">Historia</a></li>
+                            <li><a href="arquitectura.html">Arquitectura</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li class="desplegable">
+                        <span class="menu-item">La Colección</span>
+                        <ul class="desplegable-contenido">
+                            <li><a href="obras-nuevas.html">Obras Nuevas</a></li>
+                            <li><a href="artistas.html">Artistas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="exposiciones.html">Exposiciones</a></li>
+                    <li><a href="actualidad.html">Actualidad</a></li>
+                    <li><a href="visitanos.html">Visitanos</a></li>
+                    <li><a href="realidadvirtual.html">Realidad Virtual</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+    <h1>Reserva tu visita guiada y acceso al museo de arte contemporáneo</h1>
+    <div class="container">
+        <form id="root" action="http://localhost/send.php" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Visita:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Hora de Visita:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+            <div class="form-group">
+                <label for="personas">Número de Personas:</label>
+                <input type="number" id="personas" name="personas" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+            <button type="submit" name="send">Enviar</button>
+        </form>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Su visita está confirmada. Le llegara una confirmacion al correo electronico.</p>
+        </div>
+    </div>
+
+   
+
+    <div class="ubicacion">
+        <h2>Encuéntranos aquí</h2>
+        <br>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.9843707176516!2d-6.373536969790049!3d39.4707410320781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd15df8ff3ff418b%3A0x86b893be4353fa66!2sInstituto%20%C3%A1gora!5e0!3m2!1ses!2ses!4v1715801978486!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Museo de Arte Contemporáneo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
